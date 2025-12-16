@@ -1,0 +1,19 @@
+﻿@page "/todolist"
+
+<h3>TodoList</h3>
+
+<MudPaper Width="300px">
+    <MudList T="Models.TodoItem"
+             SelectionMode="SelectionMode.MultiSelection"
+             @bind-SelectedValues="SelectedValues"
+             CheckBoxColor="Color.Tertiary">
+
+        @foreach (var item in ItemsList!)
+        {
+            <MudListItem T="Models.TodoItem" Value="item" >
+                @item.Title
+            </MudListItem>
+        }
+
+    </MudList>
+</MudPaper>
