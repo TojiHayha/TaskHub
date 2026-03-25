@@ -19,12 +19,15 @@
         </MudMenu>
     </MudAppBar>
 
-    <MudDrawer @bind-Open="@_drawerOpen" Elevation="1" ClipMode="DrawerClipMode.Always">
+    <MudDrawer @bind-Open="_drawerOpen" Elevation="2">
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h5" Class="mt-1">Task-Hub</MudText>
+        </MudDrawerHeader>
         <NavMenu />
     </MudDrawer>
 
     <MudMainContent>
-        <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="my-4">
+        <MudContainer>
             @Body
         </MudContainer>
     </MudMainContent>
